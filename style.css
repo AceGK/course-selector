@@ -1,0 +1,165 @@
+html,
+body {
+  background: #f4f4f4;
+  font-family: sans-serif;
+}
+
+.selector-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+}
+.option-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.option h3,
+.option p,
+.courses p {
+  margin: 0px;
+  padding: 0px;
+}
+.option {
+  padding: 25px 0px;
+  transition: 0.2s;
+}
+.option:not(:nth-of-type(4)) {
+  border-bottom: 1px solid black;
+}
+.option:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 980px) {
+  .option:hover {
+    background: white;
+    padding: 30px 10px;
+  }
+}
+.tab-text {
+  display: none;
+}
+.mobile-option {
+  display: none;
+}
+.courses {
+  display: grid;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  background: rgb(243, 243, 243);
+  gap: 20px;
+  padding-bottom: 25px;
+}
+.courses div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 170px;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  transition: 0.3s;
+  transition-property: transform;
+}
+.courses div:hover {
+  transform: translate(5px, -5px);
+}
+.courses a {
+  text-decoration: none;
+}
+.courses h3 {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.2em;
+  padding: 1em 8% 0em 8%;
+}
+.courses p {
+  padding: 0% 8%;
+  font-size: 14px;
+}
+.courses article {
+  background: #284534;
+}
+.cert-program::after {
+  content: "Certificate Program";
+  background: #e4e4e4;
+  padding: 5px 10px;
+  width: fit-content;
+  text-align: right;
+  margin-left: auto;
+  margin-top: auto;
+}
+.cert-program:hover::after {
+  background: #f5a800;
+}
+.elective::after {
+  content: "Elective";
+  font-size: 14px;
+  background: #e4e4e4;
+  padding: 5px 10px;
+  width: fit-content;
+  text-align: right;
+  margin-left: auto;
+  margin-top: auto;
+  transition: 0.2s;
+}
+.more-btn {
+  float: right;
+  padding: 0px;
+  color: black;
+}
+.more-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media only screen and (max-width: 980px) {
+  .selector-container {
+    display: block;
+  }
+  .mobile-option {
+    display: block;
+  }
+  .desktop-option {
+    display: none;
+  }
+  .tab-text {
+    padding-bottom: 15px !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .courses {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* scrollbar and overflow for courses */
+@media only screen and (max-width: 500px) {
+  .courses {
+    display: flex;
+    overflow: auto;
+    cursor: grab;
+    padding: 0% 12% 15px 12%;
+    margin: 0px -12% 0px -12%;
+  }
+  .courses div {
+    width: 200px;
+  }
+  .courses div:hover {
+    transform: none;
+  }
+  /* width */
+  .courses::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  /* Track */
+  .courses::-webkit-scrollbar-track {
+    margin: 0px 40px;
+  }
+
+  /* Handle */
+  .courses::-webkit-scrollbar-thumb {
+    background: rgb(170, 170, 170);
+    border-radius: 50px;
+  }
+}
