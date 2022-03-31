@@ -1,13 +1,12 @@
-
 (function ($) {
-  // this array should be data grabbed from db instead
+  // should be pulle from db instead of in array
   let courses = [
     // course group 1
     "<div class='courses'>" +
-      "<a href='#'><article><div class='course-overlay cert-program'><h3>Lorem Ipsum</h3><p>Semester</p></div></article></a>" +
-      "<a href='#'><article><div class='course-overlay cert-program'><h3>Lorem Ipsum</h3><p>Elective</p></div></article></a>" +
-      "<a href='#'><article><div class='course-overlay cert-program'><h3>Lorem Ipsum</h3><p>Semester</p></div></article></a>" +
-      "<a href='#'><article><div class='course-overlay cert-program'><h3>Lorem Ipsum</h3><p>Semester</p></div></article></a>" +
+      "<a href='#'><article><div class='course-overlay cert-program'><h3>Horticulture</h3><p>Lorem</p></div></article></a>" +
+      "<a href='#'><article><div class='course-overlay cert-program'><h3>Business</h3><p>Lorem</p></div></article></a>" +
+      "<a href='#'><article><div class='course-overlay cert-program'><h3>Budtending</h3><p>Lorem</p></div></article></a>" +
+      "<a href='#'><article><div class='course-overlay cert-program'><h3>Extraction & Manufacturing</h3><p>Lorem</p></div></article></a>" +
       "</div>",
     // course group 2
     "<div class='courses'>" +
@@ -33,7 +32,7 @@
   ];
 
   let browse_all_courses =
-    "<a href='#' class='more-btn'>Browse All Courses <i class='fas fa-chevron-right fa-xs'></i></a>";
+    "<a href='/courses' class='more-btn'>Browse All Courses <i class='fas fa-chevron-right fa-xs'></i></a>";
 
   let mobile_options = [document.querySelectorAll("[data-option-mobile]")];
   let desktop_options = [document.querySelectorAll("[data-option-desktop]")];
@@ -42,9 +41,7 @@
 
   for (let i = 0; i < mobile_options[0].length; i++) {
     // insert course variabls to options (should switch this to createElement()s, and insert data as variable object parts)
-    $(desktop_options[0][i])
-      .add(mobile_options[0][i])
-      .html(courses[i]);
+    $(desktop_options[0][i]).add(mobile_options[0][i]).html(courses[i]);
 
     // show 'browse all courses' btn to course-options
     $(desktop_options[0][i])

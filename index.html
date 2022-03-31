@@ -6,61 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-
-
-<div class="container">
-    <div class="options">
-		<input checked id="one" name="tabs" type="radio">
-	    <label for="one">Tab One</label>
-
-	    <input id="two" name="tabs" type="radio" value="Two">
-	    <label for="two">Tab Two</label>
-
-	    <input id="three" name="tabs" type="radio">
-	    <label for="three">Tab Three</label>
-
-	    <input id="four" name="tabs" type="radio">
-	    <label for="four">Tab Four</label>
-
-    </div>
-    <div>
-        <!-- tab1 -->
-        <div class="courses" id="courses1">
-            <div>
-                <h3>Course</h3>
-                <p>Subtitle</p>
+ 
+  
+      <h1 style="font-weight: 600">What’s your goal?</h1>
+      <div class="selector-container">
+        <div class="option-list">
+          <div id="tab1" class="option" data-tab>
+            <h3>Get Certified</h3>
+            <p class="tab-text" data-tab-text style="display: block">
+              I want credentials to compete in the industry.
+            </p>
+            <div class="mobile-option">
+              <div data-option-mobile></div>
             </div>
-            <div>
-                <h3>Course</h3>
-                <p>Subtitle</p>
+          </div>
+  
+          <div id="tab2" class="option" data-tab>
+            <h3>Learn to grow</h3>
+            <p class="tab-text" data-tab-text>
+              I want to start a grow or increase my yields.
+            </p>
+            <div class="mobile-option">
+              <div data-option-mobile style="display: none"></div>
             </div>
-            <div>
-                <h3>Course</h3>
-                <p>Subtitle</p>
+          </div>
+  
+          <div id="tab3" class="option" data-tab>
+            <h3>Build a business</h3>
+            <p class="tab-text" data-tab-text>
+                  I want to bring my creative ideas to life.
+            </p>
+            <div class="mobile-option">
+              <div data-option-mobile style="display: none"></div>
             </div>
-            <div>
-                <h3>Course</h3>
-                <p>Subtitle</p>
+          </div>
+  
+          <div id="tab4" class="option" data-tab>
+            <h3>Start a career</h3>
+            <p class="tab-text" data-tab-text>
+              I see a future in cannabis and want to be part of it.
+            </p>
+            <div class="mobile-option">
+              <div data-option-mobile style="display: none"></div>
             </div>
+          </div>
         </div>
-        
-    </div>
-</div>
-
-<script>
-var radios = document.getElementsByTagName('input');
-for (var i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-        console.log('hello')  
-    }
-}
-
-
-
-</script>
-
-
+        <div class="desktop-option-grid">
+          <div class="desktop-option">
+            <div data-option-desktop></div>
+          </div>
+          <div class="desktop-option">
+            <div data-option-desktop style="display: none"></div>
+          </div>
+          <div class="desktop-option">
+            <div data-option-desktop style="display: none"></div>
+          </div>
+          <div class="desktop-option">
+            <div data-option-desktop style="display: none"></div>
+          </div>
+        </div>
+      </div>
+  
+<script src="script.js"></script>
 </body>
 </html>
