@@ -79,8 +79,8 @@ body {
 .courses article {
   background: #284534;
 }
-.cert-program::after {
-  content: "Certificate Program";
+.category1::after {
+  content: "Category";
   background: #e4e4e4;
   padding: 5px 10px;
   width: fit-content;
@@ -88,12 +88,11 @@ body {
   margin-left: auto;
   margin-top: auto;
 }
-.cert-program:hover::after {
+.category1:hover::after {
   background: #f5a800;
 }
-.elective::after {
+.category2::after {
   content: "Elective";
-  font-size: 14px;
   background: #e4e4e4;
   padding: 5px 10px;
   width: fit-content;
